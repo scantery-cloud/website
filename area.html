@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area — Math Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Newsreader:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Math Hub logo">
+      <span class="brand-text">
+        <span class="brand-name">Math Hub</span>
+        <span class="brand-tag">We Learn • We Solve • We Win</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="diameter.html">Diameter</a></li>
+      <li><a href="area.html">Area</a></li>
+      <li><a href="volume.html">Volume</a></li>
+      <li><a href="perimeter.html">Perimeter</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <p class="eyebrow">Tool 03</p>
+    <h1>Area Formulas</h1>
+    <p>Six shape calculators. Enter the measurements, press solve, and get the area instantly.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="calc-grid">
+
+      <div class="calc-card">
+        <h3>Rectangle</h3>
+        <div class="formula-badge">A = l × w</div>
+        <div class="field"><label for="rectL">Length</label><input type="number" id="rectL" step="any" placeholder="e.g. 8"></div>
+        <div class="field"><label for="rectW">Width</label><input type="number" id="rectW" step="any" placeholder="e.g. 5"></div>
+        <button class="btn btn-solve" onclick="areaRectangle()">Solve</button>
+        <div class="calc-output" id="rectOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Square</h3>
+        <div class="formula-badge">A = s²</div>
+        <div class="field"><label for="squareS">Side</label><input type="number" id="squareS" step="any" placeholder="e.g. 6"></div>
+        <button class="btn btn-solve" onclick="areaSquare()">Solve</button>
+        <div class="calc-output" id="squareOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Triangle</h3>
+        <div class="formula-badge">A = ½ × b × h</div>
+        <div class="field"><label for="triB">Base</label><input type="number" id="triB" step="any" placeholder="e.g. 10"></div>
+        <div class="field"><label for="triH">Height</label><input type="number" id="triH" step="any" placeholder="e.g. 6"></div>
+        <button class="btn btn-solve" onclick="areaTriangle()">Solve</button>
+        <div class="calc-output" id="triOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Circle</h3>
+        <div class="formula-badge">A = πr²</div>
+        <div class="field"><label for="circR">Radius</label><input type="number" id="circR" step="any" placeholder="e.g. 7"></div>
+        <button class="btn btn-solve" onclick="areaCircle()">Solve</button>
+        <div class="calc-output" id="circOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Parallelogram</h3>
+        <div class="formula-badge">A = b × h</div>
+        <div class="field"><label for="paraB">Base</label><input type="number" id="paraB" step="any" placeholder="e.g. 9"></div>
+        <div class="field"><label for="paraH">Height</label><input type="number" id="paraH" step="any" placeholder="e.g. 4"></div>
+        <button class="btn btn-solve" onclick="areaParallelogram()">Solve</button>
+        <div class="calc-output" id="paraOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Trapezoid</h3>
+        <div class="formula-badge">A = ½(a + b) × h</div>
+        <div class="field"><label for="trapA">Base a</label><input type="number" id="trapA" step="any" placeholder="e.g. 8"></div>
+        <div class="field"><label for="trapB">Base b</label><input type="number" id="trapB" step="any" placeholder="e.g. 5"></div>
+        <div class="field"><label for="trapH">Height</label><input type="number" id="trapH" step="any" placeholder="e.g. 4"></div>
+        <button class="btn btn-solve" onclick="areaTrapezoid()">Solve</button>
+        <div class="calc-output" id="trapOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Math Hub</div>
+        <div class="footer-tag">We Learn • We Solve • We Win</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="diameter.html">Diameter</a></li>
+        <li><a href="area.html">Area</a></li>
+        <li><a href="volume.html">Volume</a></li>
+        <li><a href="perimeter.html">Perimeter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">© 2026 Math Hub. Built with HTML, CSS &amp; JavaScript for students everywhere.</div>
+  </div>
+</footer>
+
+<script src="javascript.js"></script>
+</body>
+</html>

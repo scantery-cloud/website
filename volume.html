@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volume — Math Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Newsreader:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Math Hub logo">
+      <span class="brand-text">
+        <span class="brand-name">Math Hub</span>
+        <span class="brand-tag">We Learn • We Solve • We Win</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="diameter.html">Diameter</a></li>
+      <li><a href="area.html">Area</a></li>
+      <li><a href="volume.html">Volume</a></li>
+      <li><a href="perimeter.html">Perimeter</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <p class="eyebrow">Tool 04</p>
+    <h1>Volume Formulas</h1>
+    <p>Five solid-shape calculators. Enter the measurements, press solve, and get the volume instantly.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="calc-grid">
+
+      <div class="calc-card">
+        <h3>Cube</h3>
+        <div class="formula-badge">V = s³</div>
+        <div class="field"><label for="cubeS">Side</label><input type="number" id="cubeS" step="any" placeholder="e.g. 4"></div>
+        <button class="btn btn-solve" onclick="volCube()">Solve</button>
+        <div class="calc-output" id="cubeOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Cylinder</h3>
+        <div class="formula-badge">V = πr²h</div>
+        <div class="field"><label for="cylR">Radius</label><input type="number" id="cylR" step="any" placeholder="e.g. 3"></div>
+        <div class="field"><label for="cylH">Height</label><input type="number" id="cylH" step="any" placeholder="e.g. 10"></div>
+        <button class="btn btn-solve" onclick="volCylinder()">Solve</button>
+        <div class="calc-output" id="cylOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Cone</h3>
+        <div class="formula-badge">V = ⅓πr²h</div>
+        <div class="field"><label for="coneR">Radius</label><input type="number" id="coneR" step="any" placeholder="e.g. 3"></div>
+        <div class="field"><label for="coneH">Height</label><input type="number" id="coneH" step="any" placeholder="e.g. 9"></div>
+        <button class="btn btn-solve" onclick="volCone()">Solve</button>
+        <div class="calc-output" id="coneOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Sphere</h3>
+        <div class="formula-badge">V = 4/3 × πr³</div>
+        <div class="field"><label for="sphereR">Radius</label><input type="number" id="sphereR" step="any" placeholder="e.g. 5"></div>
+        <button class="btn btn-solve" onclick="volSphere()">Solve</button>
+        <div class="calc-output" id="sphereOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+      <div class="calc-card">
+        <h3>Rectangular Prism</h3>
+        <div class="formula-badge">V = l × w × h</div>
+        <div class="field"><label for="prismL">Length</label><input type="number" id="prismL" step="any" placeholder="e.g. 6"></div>
+        <div class="field"><label for="prismW">Width</label><input type="number" id="prismW" step="any" placeholder="e.g. 4"></div>
+        <div class="field"><label for="prismH">Height</label><input type="number" id="prismH" step="any" placeholder="e.g. 3"></div>
+        <button class="btn btn-solve" onclick="volPrism()">Solve</button>
+        <div class="calc-output" id="prismOutput"><span class="result-label">Result</span>Waiting for input…</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Math Hub</div>
+        <div class="footer-tag">We Learn • We Solve • We Win</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="diameter.html">Diameter</a></li>
+        <li><a href="area.html">Area</a></li>
+        <li><a href="volume.html">Volume</a></li>
+        <li><a href="perimeter.html">Perimeter</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">© 2026 Math Hub. Built with HTML, CSS &amp; JavaScript for students everywhere.</div>
+  </div>
+</footer>
+
+<script src="javascript.js"></script>
+</body>
+</html>
